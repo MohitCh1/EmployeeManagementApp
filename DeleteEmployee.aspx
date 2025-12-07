@@ -1,25 +1,25 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DeleteEmployee.aspx.cs"
-    Inherits="EmployeeWebApp.DeleteEmployee" Async="true" %>
+Inherits="EmployeeWebApp.DeleteEmployee" Async="true" MasterPageFile="~/Site.Master" %>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Delete Employee</title>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-        <h2>Delete Employee</h2>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Delete Employee</h2>
 
-        <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label>
-        <br /><br />
+    <asp:Label ID="lblMessage" runat="server" ForeColor="Red" CssClass="mb-3 d-block"></asp:Label>
 
+    <div class="alert alert-warning" role="alert">
         Are you sure you want to delete this employee?
-        <br /><br />
+    </div>
 
-        <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" />
-        <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
+    <div class="mt-3">
+        <asp:Button ID="btnDelete" runat="server" Text="Delete"
+            OnClick="btnDelete_Click" CssClass="btn btn-danger me-2" />
 
-    </form>
-</body>
-</html>
+        <asp:Button ID="btnCancel" runat="server" Text="Cancel"
+            OnClick="btnCancel_Click" CssClass="btn btn-secondary" />
+    </div>
+
+</div>
+
+</asp:Content>

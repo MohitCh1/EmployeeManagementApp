@@ -1,29 +1,55 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditEmployee.aspx.cs"
-    Inherits="EmployeeWebApp.EditEmployee" Async="true" %>
+Inherits="EmployeeWebApp.EditEmployee" Async="true" MasterPageFile="~/Site.Master" %>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Edit Employee</title>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-        <h2>Edit Employee</h2>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Edit Employee</h2>
 
-        <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label>
-        <br /><br />
+    <asp:Label ID="lblMessage" runat="server" ForeColor="Red" CssClass="mb-3 d-block"></asp:Label>
 
-        Name: <asp:TextBox ID="txtName" runat="server"></asp:TextBox><br />
-        Email: <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox><br />
-        Phone: <asp:TextBox ID="txtPhone" runat="server"></asp:TextBox><br />
-        Department: <asp:TextBox ID="txtDepartment" runat="server"></asp:TextBox><br />
-        State: <asp:TextBox ID="txtState" runat="server"></asp:TextBox><br />
-        District: <asp:TextBox ID="txtDistrict" runat="server"></asp:TextBox><br /><br />
+    <asp:Panel runat="server">
 
-        <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" />
-        <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
+        <div class="mb-3">
+            <label for="txtName" class="form-label">Name</label>
+            <asp:TextBox ID="txtName" runat="server" CssClass="form-control" />
+        </div>
 
-    </form>
-</body>
-</html>
+        <div class="mb-3">
+            <label for="txtEmail" class="form-label">Email</label>
+            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label for="txtPhone" class="form-label">Phone</label>
+            <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label for="txtDepartment" class="form-label">Department</label>
+            <asp:TextBox ID="txtDepartment" runat="server" CssClass="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label for="txtState" class="form-label">State</label>
+            <asp:TextBox ID="txtState" runat="server" CssClass="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label for="txtDistrict" class="form-label">District</label>
+            <asp:TextBox ID="txtDistrict" runat="server" CssClass="form-control" />
+        </div>
+
+        <div class="mt-3">
+            <asp:Button ID="btnUpdate" runat="server" Text="Update" 
+                OnClick="btnUpdate_Click" CssClass="btn btn-success me-2" />
+
+            <asp:Button ID="btnCancel" runat="server" Text="Cancel" 
+                OnClick="btnCancel_Click" CssClass="btn btn-secondary" />
+        </div>
+
+    </asp:Panel>
+
+</div>
+
+</asp:Content>
